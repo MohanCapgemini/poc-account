@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -19,7 +20,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 @SpringBootApplication
 @EntityScan("com.disney.poc.microservices.accounts")
 @EnableJpaRepositories("com.disney.poc.microservices.accounts")
-@PropertySource("classpath:db-config.properties")
+@PropertySources({@PropertySource("classpath:db-config.properties"),@PropertySource("file:${config.home}/poc-account-environment.properties")})
 public class AccountsWebApplication {
 
 	protected Logger logger = Logger.getLogger(AccountsWebApplication.class.getName());
