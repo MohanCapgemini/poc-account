@@ -18,6 +18,8 @@ eureka:
       defaultZone: ${eureka.registry.url}
   instance:
     preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 3
+    leaseExpirationDurationInSeconds: 2
 
 # HTTP Server
 server:
