@@ -14,12 +14,13 @@ error:
 # Discovery Server Access
 eureka:
   client:
+    registryFetchIntervalSeconds: 1
     serviceUrl:
       defaultZone: ${eureka.registry.url}
   instance:
     preferIpAddress: true
-    leaseRenewalIntervalInSeconds: 3
-    leaseExpirationDurationInSeconds: 2
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 1
 
 # HTTP Server
 server:

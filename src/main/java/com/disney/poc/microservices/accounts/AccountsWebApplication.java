@@ -33,10 +33,10 @@ public class AccountsWebApplication {
 		logger.info("dataSource() invoked");
 
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		        dataSource.setDriverClassName(env.getProperty("spring.datasource.driver"));
-		        dataSource.setUrl(env.getProperty("spring.datasource.url"));
-		        dataSource.setUsername(env.getProperty("spring.datasource.username"));
-		        dataSource.setPassword(env.getProperty("spring.datasource.password"));
+		dataSource.setDriverClassName(env.getProperty("spring.datasource.driver"));
+        dataSource.setUrl(env.getProperty("spring.datasource.url"));
+        dataSource.setUsername(env.getProperty("spring.datasource.username"));
+        dataSource.setPassword(env.getProperty("spring.datasource.password"));
 
 
 		logger.info("dataSource = " + dataSource);
