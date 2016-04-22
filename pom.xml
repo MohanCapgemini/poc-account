@@ -23,7 +23,6 @@
 		</dependency>
 
 		<dependency>
-			<!-- Setup Spring Data common components -->
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-commons</artifactId>
 		</dependency>
